@@ -3,7 +3,6 @@ import "package:tourist/bookings.dart";
 import "package:tourist/bottem_nav/bookmark.dart";
 import "package:tourist/bottem_nav/bottem_nav.dart";
 import "package:tourist/homepage.dart";
-import 'package:tourist/homepage.dart';
 import "package:tourist/settings.dart";
 
 class Component extends StatefulWidget {

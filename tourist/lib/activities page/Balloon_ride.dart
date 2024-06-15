@@ -1,10 +1,27 @@
 import "package:flutter/material.dart";
-import "package:ionicons/ionicons.dart";
-import 'package:ionicons/ionicons.dart';
 import "package:like_button/like_button.dart";
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Ballon extends StatelessWidget {
   const Ballon({super.key});
+
+  //Adding bookmark
+  Future<void> addBookmark(String itemid) async {
+    User? user = FirebaseAuth.instance.currentUser;
+
+    if (user != null) {
+      DocumentReference userDoc =
+          FirebaseFirestore.instance.collection('User_info').doc(user.uid);
+      // Add the bookmark item
+      await userDoc.collection('bookmark').doc(itemid).set({
+        'name': itemid,
+      });
+    } else {
+      print('No user is currently signed in.');
+    }
+    print(user?.uid);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -151,6 +168,14 @@ class Ballon extends StatelessWidget {
                     },
                   ),
                   LikeButton(
+                    onTap: (bool isLiked) async {
+                      if (isLiked) {
+                        return false;
+                      } else {
+                        addBookmark("A1");
+                        return true;
+                      }
+                    },
                     size: 31,
                     circleColor: CircleColor(
                         start: Color(0xff00ddff), end: Color(0xff0099cc)),

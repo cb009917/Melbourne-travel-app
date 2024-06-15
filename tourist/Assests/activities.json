@@ -1,0 +1,33 @@
+{
+"items":[
+    {
+        "id" : "A1",
+        "name": "Hot air balloon ride",
+        "address": "Yarra valley, Melbourne",
+        "img": "Assests/Icons/botanic_garden.jpg",
+        "rating": "4.5",
+        "link": "ballonride",
+        "price": "AUD 400 "
+    },
+
+    {
+        "id" : "A2",
+        "name": "Wine testing",
+        "address": "Yarra valley, Melbourne",
+        "img": "Assests/Icons/wine_testing.webp",
+        "rating": "4.6",
+        "link": "winetesting",
+        "price": "AUD 200 "
+    },
+
+    {
+        "id" : "A3",
+        "name": "River cruise",
+        "address": "Yarra valley, Melbourne",
+        "img": "Assests/Icons/river_cruise.jpg",
+        "rating": "4.2",
+        "link": "rivercruise",
+        "price": "AUD 75"
+    }
+]
+}
