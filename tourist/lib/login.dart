@@ -1,12 +1,9 @@
 // import "dart:js";
 
 import "package:firebase_auth/firebase_auth.dart";
-import 'package:firebase_core/firebase_core.dart';
 import "package:flutter/material.dart";
-import "package:tourist/auth_user.dart";
 import "package:tourist/components.dart";
 import "package:tourist/forgot.dart";
-import "package:tourist/homepage.dart";
 import "package:tourist/register.dart";
 
 class LogIn extends StatefulWidget {
@@ -19,9 +16,14 @@ class _LogInState extends State<LogIn> {
   final passwordcontroller = TextEditingController();
 
   void singin() async {
-    // showDialog(context: context, builder: (context)){
-    //   return const Center(child: CircularProgressIndicator());
-    // }
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
 
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
