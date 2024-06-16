@@ -131,9 +131,9 @@ class _SettingState extends State<Setting> {
                               Text(
                                 "Battery",
                                 style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               Row(
                                 children: [
@@ -142,9 +142,9 @@ class _SettingState extends State<Setting> {
                                   Text(
                                     '${batteryManager.batteryLevel}%',
                                     style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black87),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -160,9 +160,9 @@ class _SettingState extends State<Setting> {
                               Text(
                                 "Dark mode",
                                 style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               Mybutton(
                                 onTap: () {
